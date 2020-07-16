@@ -1,1 +1,105 @@
-/* You can add global styles to this file, and also import other style files */
+#wrapper {
+    overflow-x: hidden;
+ }
+
+#sidebar-wrapper {
+  background-color: #F4FBFF;
+  min-height: 100vh;
+  margin-left: -15rem;
+  -webkit-transition: margin .25s ease-out;
+  -moz-transition: margin .25s ease-out;
+  -o-transition: margin .25s ease-out;
+  transition: margin .25s ease-out;
+}
+
+#sidebar-wrapper .sidebar-hearder-css{
+  padding: 30px;
+  font-size: 40px;
+  text-align: center;
+}
+
+.nav-css{
+  background-color: #F4FBFF;
+}
+
+#posts{
+  width: 100%;
+  margin-bottom: 3em;
+}
+
+#posts .corpo{
+  position: relative;
+  z-index: 0;
+  width: 100%;
+  width: calc(100% - 150px);
+}
+
+#posts .corpo h3{
+  font-weight: 400;
+  font-size: 30px;
+}
+
+#posts .corpo .meta-wrap{
+  width: 100%;
+  display: block;
+}
+
+#posts .img{
+  display: block;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  background-image: url(image_1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+#sidebar-wrapper .list-group {
+  width: 15rem;
+}
+
+#page-content-wrapper {
+  min-width: 100vw;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+  margin-left: 0;
+}
+
+@media (max-width: 767.98px) {
+  #posts .img{
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+  #posts .corpo{
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (min-width: 768px) {
+  #sidebar-wrapper {
+    background-color: #F4FBFF;
+    margin-left: 0;
+  }
+
+  #posts .corpo{
+    padding-left: 1.5rem !important;
+  }
+
+  #posts .corpo .meta-wrap .meta span{
+    font-size: 14px;
+    margin: 0 10px 0 0;
+    color: #bfbfbf;
+  }
+
+  #page-content-wrapper {
+    min-width: 0;
+    width: 100%;
+  }
+
+  #wrapper.toggled #sidebar-wrapper {
+    margin-left: -15rem;
+  }
+}
