@@ -49,7 +49,7 @@
   height: 150px;
   width: 150px;
   border-radius: 50%;
-  background-image: url(image_1.jpg);
+  background-image: url('./assets/images/image_1.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
