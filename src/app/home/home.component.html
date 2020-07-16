@@ -6,12 +6,12 @@
         <a href="#" class="mb-2 d-block">Blog</a>
       </div>
       <div class="list-group list-group-flush">
-        <a href="index.html" class="list-group-item list-group-item-action bg-light">home</a>
-        <a href="login.html" class="list-group-item list-group-item-action bg-light">login</a>
-        <a href="register.html" class="list-group-item list-group-item-action bg-light">register</a>
-        <a href="contato.html" class="list-group-item list-group-item-action bg-light">contato</a>
-        <a href="about.html" class="list-group-item list-group-item-action bg-light">about</a>
-        <a href="favoritos.html" class="list-group-item list-group-item-action bg-light">favoritos</a>
+        <a [routerLink]="['/chome']" class="list-group-item list-group-item-action bg-light">home</a>
+        <a [routerLink]="['/login']" class="list-group-item list-group-item-action bg-light">login</a>
+        <a [routerLink]="['/register']" class="list-group-item list-group-item-action bg-light">register</a>
+        <a [routerLink]="['/contato']" class="list-group-item list-group-item-action bg-light">contato</a>
+        <a [routerLink]="['/about']" class="list-group-item list-group-item-action bg-light">about</a>
+        <a [routerLink]="['/favoritos']" class="list-group-item list-group-item-action bg-light">favoritos</a>
       </div>
     </div>
     <!-- /#sidebar-wrapper -->
@@ -100,11 +100,3 @@
 
 </div>
 <!-- /#wrapper -->
-
-
-<script>
-    $("#menu-toggle").click(function(e) {
-      e.preventDefault();
-      $("#wrapper").toggleClass("toggled");
-    });
-  </script>

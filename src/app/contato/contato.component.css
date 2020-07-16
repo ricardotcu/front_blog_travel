@@ -1,0 +1,48 @@
+@media (min-width: 768px){
+    .col-md-12 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+.w-100 {
+    width: 100% !important;
+}
+
+.contact-info .info{
+    width: 100%;
+}
+
+.block-9 .form-control {
+    outline: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    font-size: 15px;
+}
+
+#map {
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

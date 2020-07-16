@@ -1,1 +1,84 @@
-<p>contato works!</p>
+<div class="d-flex" id="wrapper">
+
+    <!-- Sidebar -->
+    <div class="border-right" id="sidebar-wrapper">
+      <div class="sidebar-hearder sidebar-hearder-css" data-animate-effect="fadeInLeft" style="background-color: #F4FBFF">
+        <a href="#" class="mb-2 d-block">Blog</a>
+      </div>
+      <div class="list-group list-group-flush">
+        <a [routerLink]="['/chome']" class="list-group-item list-group-item-action bg-light">home</a>
+        <a [routerLink]="['/login']" class="list-group-item list-group-item-action bg-light">login</a>
+        <a [routerLink]="['/register']" class="list-group-item list-group-item-action bg-light">register</a>
+        <a [routerLink]="['/contato']" class="list-group-item list-group-item-action bg-light">contato</a>
+        <a [routerLink]="['/about']" class="list-group-item list-group-item-action bg-light">about</a>
+        <a [routerLink]="['/favoritos']" class="list-group-item list-group-item-action bg-light">favoritos</a>
+      </div>
+    </div>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+
+      <nav class="navbar navbar-expand-lg navbar-light border-bottom nav-css">
+        <button class="btn btn-primary" id="menu-toggle">menu</button>
+      </nav>
+
+      <div class="container" style="padding: 5em 0; padding-left: 1.5rem !important;">
+          <div class="row d-flex mb-5 contact-info">
+            <div class="col-md-12 mb-4">
+              <h2 class="h3">Contact Information</h2>
+            </div>
+            <div class="w-100"></div>
+            <div class="col-lg-6 col-xl-3 d-flex mb-4">
+                <div class="info bg-light p-4" style="color: #666666;">
+                  <p><span>Address:</span> 198 West 21th Street, Suite 721 New York NY 10016</p>
+                </div>
+            </div>
+            <div class="col-lg-6 col-xl-3 d-flex mb-4">
+                <div class="info bg-light p-4">
+                  <p><span>Phone:</span> <a style="color: black;" href="tel://1234567920">+ 1235 2355 98</a></p>
+                </div>
+            </div>
+            <div class="col-lg-6 col-xl-3 d-flex mb-4">
+                <div class="info bg-light p-4" style="color: #666666;">
+                  <p><span>Email:</span> <a style="color: black;"href="mailto:info@yoursite.com">info@yoursite.com</a></p>
+                </div>
+            </div>
+            <div class="col-lg-6 col-xl-3 d-flex mb-4">
+                <div class="info bg-light p-4" style="color: #666666;">
+                  <p><span>Website</span> <a style="color: black;" href="#">yoursite.com</a></p>
+                </div>
+            </div>
+          </div>
+          <div class="row block-9">
+            <div class="col-lg-6 d-flex">
+              <form action="#" class="bg-light p-5 contact-form">
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Your Name">
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Your Email">
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Subject">
+                </div>
+                <div class="form-group">
+                  <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
+                </div>
+                <div class="form-group">
+                  <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
+                </div>
+              </form>
+            
+            </div>
+
+            <div class="col-lg-6 d-flex">
+                MAPA AQUI
+            </div>
+          </div>
+        </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+
+  </div>
+  <!-- /#wrapper -->
