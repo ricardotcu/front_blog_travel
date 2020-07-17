@@ -1,4 +1,5 @@
 import { User } from './User'
+import { Comentario } from './Comentario';
 
 export class Post {
   public id: number
@@ -6,4 +7,5 @@ export class Post {
   public descricao: string
   public caminho: string
   public user: User
+  public comenterios: Comentario[];
 }
