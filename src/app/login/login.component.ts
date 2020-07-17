@@ -27,6 +27,7 @@ export class LoginComponent implements OnInit {
   }
 
   login(user: User) {
+    console.log(user)
     this.http.post(`${this.apiURL}/login`, user)
       .subscribe(result => {
         console.log(result);
