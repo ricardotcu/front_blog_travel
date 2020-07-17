@@ -23,10 +23,6 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.session = JSON.parse(window.localStorage.getItem('currentUser'));
     console.log(this.session)
-    console.log(this.session.length)
-    if (this.session) {
-      console.log('session nao nula')
-    }
 
     this.http.get(`${this.apiURL}/home`)
       .subscribe(result => {
