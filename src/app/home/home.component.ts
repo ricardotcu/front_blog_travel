@@ -20,7 +20,7 @@ export class HomeComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.http.get(`${this.apiURL}/`)
+    this.http.get(`${this.apiURL}/home`)
       .subscribe(result => {
         this.resumo = result;
         console.log(this.resumo)
