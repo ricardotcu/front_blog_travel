@@ -27,12 +27,9 @@ export class LoginComponent implements OnInit {
   }
 
   login(user: User) {
-    console.log(user)
     this.http.post(`${this.apiURL}/login`, user)
       .subscribe(result => {
-        console.log(result);
         window.localStorage.setItem('currentUser', JSON.stringify(result));
-        console.log(window.localStorage.getItem('currentUser'));
         this.r.navigate(['/home']);
       });
   }
