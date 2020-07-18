@@ -30,7 +30,6 @@ export class HomeComponent implements OnInit {
     this.http.get(`${this.apiURL}/home`)
       .subscribe(result => {
         this.resumo = result;
-        console.log(this.resumo);
       });
   }
 
