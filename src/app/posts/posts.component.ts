@@ -53,7 +53,7 @@ export class PostsComponent implements OnInit {
 
     this.http.post(`${this.apiURL}/save_comentario`, comentario)
       .subscribe(result => {
-        this.post
+        console.log(result)
       });
   }
   
