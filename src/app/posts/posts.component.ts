@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Router, ParamMap, ActivatedRoute  } from '@angular/router';
 
 @Component({
   selector: 'app-posts',
@@ -6,12 +8,35 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./posts.component.css']
 })
 export class PostsComponent implements OnInit {
+  title = 'home';	
+  readonly apiURL : string;
+  public rota: Router;
+  public post: any;
+  public id_post: any;
+
+  @Input()
   public session: any;
 
-  constructor() { }
+  constructor(private route: ActivatedRoute, private http : HttpClient, private r: Router){
+    this.apiURL = 'https://back-end-travel.herokuapp.com';
+    this.rota = r;
+  }
 
   ngOnInit(): void {
     this.session = JSON.parse(window.localStorage.getItem('currentUser'));
+    console.log(this.session)
+
+    this.route.params.subscribe( parametros => {
+      if (parametros['id']) {
+        this.id_post = parametros['id']
+      }
+    });
+
+    this.http.get(`${this.apiURL}/post/${this.id_post}`)
+      .subscribe(result => {
+        this.post = result;
+        console.log(this.post);
+      });
   }
 
   logout() {

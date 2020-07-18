@@ -7,7 +7,6 @@
       </div>
       <div class="list-group list-group-flush">
         <a [routerLink]="['/home']" class="list-group-item list-group-item-action bg-light">home</a>
-        <a [routerLink]="['/posts']" class="list-group-item list-group-item-action bg-light">posts</a>
         <a [routerLink]="['/login']" class="list-group-item list-group-item-action bg-light">login</a>
         <button (click)="logout()" class="list-group-item list-group-item-action bg-light">logout</button>
         <a [routerLink]="['/register']" class="list-group-item list-group-item-action bg-light">register</a>
@@ -24,7 +23,7 @@
       <nav class="navbar navbar-expand-lg navbar-light border-bottom nav-css">
         <button class="btn btn-primary" id="menu-toggle">menu</button>
         <div>
-          <p style="font-size: 24px;">
+          <p style="font-size: 24px;margin-left: 15px;" *ngIf="session">
             {{session[0].email}}
           </p>
         </div>
@@ -34,27 +33,14 @@
         <div class="row d-flex">
           <div class="col-lg col-md col-sm px-md-5 py-5">
               <div class="row pt-md-4">
-                  <h1 class="mb-3">A Loving Heart is the Truest Wisdom</h1>
-          <p style="color: #666666">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, eius mollitia suscipit, 
-              quisquam doloremque distinctio perferendis et doloribus unde architecto optio laboriosam porro 
-              adipisci sapiente officiis nemo accusamus ad praesentium? Esse minima nisi et. Dolore perferendis, 
-              enim praesentium omnis, iste doloremque quia officia optio deserunt molestiae voluptates soluta 
-              architecto tempora.</p>
+                  <h1 class="mb-3">{{ post.titulo }}</h1>
+          <p style="color: #666666">{{ post.descricao }}</p>
           <p>
-            <img src="../../assets/images/image_1.jpg" alt="" class="img-fluid">
+            <img src="{{ post.caminho }}" alt="" class="img-fluid">
           </p>
-          <p style="color: #666666">Quisquam esse aliquam fuga distinctio, quidem delectus veritatis reiciendis. Nihil explicabo quod, est 
-              eos ipsum. Unde aut non tenetur tempore, nisi culpa voluptate maiores officiis quis vel ab consectetur 
-              suscipit veritatis nulla quos quia aspernatur perferendis, libero sint. Error, velit, porro. Deserunt minus, 
-              quibusdam iste enim veniam, modi rem maiores.</p>
-          <p style="color: #666666">Adipisci vero culpa, eius nobis soluta. Dolore, maxime ullam ipsam quidem, dolor distinctio similique 
-              asperiores voluptas enim, exercitationem ratione aut adipisci modi quod quibusdam iusto, voluptates 
-              beatae iure nemo itaque laborum. Consequuntur et pariatur totam fuga eligendi vero dolorum provident. 
-              Voluptatibus, veritatis. Beatae numquam nam ab voluptatibus culpa, tenetur recusandae!</p>
-          <p style="color: #666666">Voluptas dolores dignissimos dolorum temporibus, autem aliquam ducimus at officia adipisci quasi nemo 
-              a perspiciatis provident magni laboriosam repudiandae iure iusto commodi debitis est blanditiis alias 
-              laborum sint dolore. Dolores, iure, reprehenderit. Error provident, pariatur cupiditate soluta doloremque 
-              aut ratione. Harum voluptates mollitia illo minus praesentium, rerum ipsa debitis, inventore?</p>
+          <p style="color: #666666">{{ post.descricao }}</p>
+          <p style="color: #666666">{{ post.descricao }}</p>
+          <p style="color: #666666">{{ post.descricao }}</p>
           <div class="tag-widget post-tag-container mb-5 mt-5">
             <div class="tagcloud">
               <a href="#" class="tag-cloud-link">Life</a>
@@ -70,6 +56,8 @@
             </div>
             <div class="desc">
               <h3>George Washington</h3>
+              <h3>{{post.user.id}}</h3>
+              <h3>{{post.user[0].id}}</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus itaque, autem necessitatibus voluptate quod mollitia delectus aut, sunt placeat nam vero culpa sapiente consectetur similique, inventore eos fugit cupiditate numquam!</p>
             </div>
           </div>

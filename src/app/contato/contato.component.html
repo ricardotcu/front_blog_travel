@@ -7,7 +7,6 @@
       </div>
       <div class="list-group list-group-flush">
         <a [routerLink]="['/home']" class="list-group-item list-group-item-action bg-light">home</a>
-        <a [routerLink]="['/posts']" class="list-group-item list-group-item-action bg-light">posts</a>
         <a [routerLink]="['/login']" class="list-group-item list-group-item-action bg-light">login</a>
         <button (click)="logout()" class="list-group-item list-group-item-action bg-light">logout</button>
         <a [routerLink]="['/register']" class="list-group-item list-group-item-action bg-light">register</a>
@@ -24,7 +23,7 @@
       <nav class="navbar navbar-expand-lg navbar-light border-bottom nav-css">
         <button class="btn btn-primary" id="menu-toggle">menu</button>
         <div>
-          <p style="font-size: 24px;">
+          <p style="font-size: 24px;margin-left: 15px;" *ngIf="session">
             {{session[0].email}}
           </p>
         </div>
