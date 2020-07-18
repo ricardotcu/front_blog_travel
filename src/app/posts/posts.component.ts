@@ -49,7 +49,7 @@ export class PostsComponent implements OnInit {
 
     let aux: any = JSON.parse(window.localStorage.getItem('currentUser'))
     comentario.userId = aux.id;
-    console.log(aux);
+    console.log(comentario);
 
     this.http.post(`${this.apiURL}/save_comentario`, comentario)
       .subscribe(result => {
