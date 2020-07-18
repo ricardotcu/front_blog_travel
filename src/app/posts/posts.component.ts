@@ -34,9 +34,7 @@ export class PostsComponent implements OnInit {
 
     this.http.get(`${this.apiURL}/post/${this.id_post}`)
       .subscribe(result => {
-        let aux = [result];
-        console.log(aux);
-        this.post = result;
+        this.post = [result];
         console.log(this.post);
       });
   }
