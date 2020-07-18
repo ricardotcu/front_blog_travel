@@ -45,10 +45,10 @@ export class PostsComponent implements OnInit {
   }
 
   comentar(comentario: Comentario) {
-    comentario.postId = this.post.id;
+    comentario.postId = this.post[0].id;
 
     let aux: any = JSON.parse(window.localStorage.getItem('currentUser'))
-    comentario.userId = aux.id;
+    comentario.userId = aux[0].id;
     console.log(comentario);
 
     this.http.post(`${this.apiURL}/save_comentario`, comentario)
