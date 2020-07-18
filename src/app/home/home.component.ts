@@ -36,9 +36,7 @@ export class HomeComponent implements OnInit {
 
   logout() {
     window.localStorage.clear();
-    console.log(window.localStorage.getItem('currentUser'));
     this.session = false;
-    console.log(this.session);
   }
 
 }
