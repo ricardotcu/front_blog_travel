@@ -33,11 +33,10 @@ export class HomeComponent implements OnInit {
   }
 
   logout() {
-    this.session = window.localStorage.clear();
+    window.localStorage.clear();
     console.log(window.localStorage.getItem('currentUser'));
+    this.session = false;
     console.log(this.session);
-    let aux: boolean = this.session;
-    console.log(aux);
   }
 
 }
