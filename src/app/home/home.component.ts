@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 
@@ -13,6 +13,8 @@ export class HomeComponent implements OnInit {
   readonly apiURL : string;
   public rota: Router;
   public resumo: any;
+
+  @Input()
   public session: any;
 
   constructor(private http : HttpClient, private r: Router){
