@@ -35,7 +35,7 @@
               <div class="row pt-md-4">
                   <div class="col-md-12" *ngFor="let post of resumo">
                       <div class="blog-entry-2 ftco-animate fadeInUp ftco-animated">
-                          <a [routerLink]="['/posts, post.id']" class="img"></a>
+                          <a [routerLink]="['/posts', post.id]" class="img"></a>
                           <div class="text pt-4">
                               <h3 class="mb-4"><a [routerLink]="['/posts', post.id]" style="color: black;">{{ post.titulo }}</a></h3>
                               <p class="mb-4" style="color: #666666;">{{ post.descricao }}</p>
@@ -55,7 +55,7 @@
                                       </p>
                                   </div>
                                   <div class="half">
-                                      <p><a [routerLink]="['/posts, post.id']" class="btn btn-primary p-3 px-xl-4 py-xl-3">Continue Lendo</a></p>
+                                      <p><a [routerLink]="['/posts', post.id]" class="btn btn-primary p-3 px-xl-4 py-xl-3">Continue Lendo</a></p>
                                   </div>
                               </div>
                           </div>
