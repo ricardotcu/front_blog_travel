@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Router, ParamMap, ActivatedRoute  } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
+import { Router, ActivatedRoute  } from '@angular/router';
 
 @Component({
   selector: 'app-posts',
