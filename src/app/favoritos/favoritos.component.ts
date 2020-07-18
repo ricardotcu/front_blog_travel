@@ -12,4 +12,8 @@ export class FavoritosComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  logout() {
+    window.localStorage.clear();
+  }
+
 }

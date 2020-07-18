@@ -12,4 +12,8 @@ export class PostsComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  logout() {
+    window.localStorage.clear();
+  }
+
 }

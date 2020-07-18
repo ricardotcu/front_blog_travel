@@ -7,6 +7,7 @@ import { Router } from '@angular/router';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
+  
 export class HomeComponent implements OnInit {
   title = 'home';	
   readonly apiURL : string;
@@ -27,8 +28,15 @@ export class HomeComponent implements OnInit {
     this.http.get(`${this.apiURL}/home`)
       .subscribe(result => {
         this.resumo = result;
-        console.log(this.resumo)
+        console.log(this.resumo);
       });
+  }
+
+  logout() {
+    window.localStorage.clear();
+    console.log(window.localStorage.getItem('currentUser'));
+    this.session = [];
+    console.log(this.session);
   }
 
 }
