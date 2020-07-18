@@ -78,28 +78,29 @@
                   </ul>
                   <!-- END comment-list -->
                   
-                  <div class="comment-form-wrap pt-5">
+                  <div class="comment-form-wrap pt-5"> 
                     <h3 class="mb-5">Leave a comment</h3>
-                    <form action="#" class="p-3 p-md-5 bg-light">
+                    <form action="#" class="p-3 p-md-5 bg-light" [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+                    <!--
                       <div class="form-group">
-                        <label for="name" style="color: #666666;">Name *</label>
+                        <label for="name" style="color: #666666;">nome *</label>
                         <input type="text" class="form-control" id="name">
                       </div>
                       <div class="form-group">
-                        <label for="email" style="color: #666666;">Email *</label>
+                        <label for="email" style="color: #666666;">email *</label>
                         <input type="email" class="form-control" id="email">
                       </div>
                       <div class="form-group">
-                        <label for="website" style="color: #666666;">Website</label>
+                        <label for="website" style="color: #666666;">imagem</label>
                         <input type="url" class="form-control" id="website">
                       </div>
-
+                    -->
                       <div class="form-group">
-                        <label for="message" style="color: #666666;">Message</label>
-                        <textarea name="" id="message" cols="30" rows="10" class="form-control"></textarea>
+                        <label for="message" style="color: #666666;">comentario</label>
+                        <textarea formControlName="senha"  name="senha" id="message" cols="30" rows="30" class="form-control"></textarea>
                       </div>
                       <div class="form-group">
-                        <input type="submit" value="Post Comment" class="btn py-3 px-4 btn-primary">
+                        <input type="submit"  [disabled]="!profileForm.valid" value="Post Comment" class="btn py-3 px-4 btn-primary">
                       </div>
 
                     </form>

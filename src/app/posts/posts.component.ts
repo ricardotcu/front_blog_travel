@@ -1,6 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router, ActivatedRoute  } from '@angular/router';
+import { FormGroup, FormControl } from '@angular/forms';
+import { Comentario } from '../models/Comentario';
 
 @Component({
   selector: 'app-posts',
@@ -13,6 +15,9 @@ export class PostsComponent implements OnInit {
   public rota: Router;
   public post: any;
   public id_post: any;
+  profileForm = new FormGroup({
+    comentario: new FormControl(''),
+  });
 
   @Input()
   public session: any;
@@ -37,6 +42,23 @@ export class PostsComponent implements OnInit {
         this.post = [result];
         console.log(this.post);
       });
+  }
+
+  comentar(comentario: Comentario) {
+    comentario.postId = this.post.id;
+
+    let aux: any = JSON.parse(window.localStorage.getItem('currentUser'))
+    comentario.userId = aux.id;
+    console.log(aux);
+
+    this.http.post(`${this.apiURL}/save_comentario`, comentario)
+      .subscribe(result => {
+        this.post
+      });
+  }
+  
+  onSubmit() {
+    this.comentar(this.profileForm.value);
   }
 
   logout() {

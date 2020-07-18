@@ -13,7 +13,7 @@
         <ng-template #logoutsession>
           <a [routerLink]="['/login']" class="list-group-item list-group-item-action bg-light">login</a>
         </ng-template>
-        <a [routerLink]="['/register']" class="list-group-item list-group-item-action bg-light">register</a>
+        <a *ngIf="session" [routerLink]="['/register']" class="list-group-item list-group-item-action bg-light">register</a>
         <a [routerLink]="['/contato']" class="list-group-item list-group-item-action bg-light">contato</a>
         <a [routerLink]="['/about']" class="list-group-item list-group-item-action bg-light">about</a>
         <a [routerLink]="['/favoritos']" class="list-group-item list-group-item-action bg-light">favoritos</a>
