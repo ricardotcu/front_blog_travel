@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./favoritos.component.css']
 })
 export class FavoritosComponent implements OnInit {
+  public session: any;
 
   constructor() { }
 
   ngOnInit(): void {
+    this.session = JSON.parse(window.localStorage.getItem('currentUser'));
   }
 
   logout() {

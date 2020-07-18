@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contato.component.css']
 })
 export class ContatoComponent implements OnInit {
+  public session: any;
 
   constructor() { }
 
   ngOnInit(): void {
+    this.session = JSON.parse(window.localStorage.getItem('currentUser'));
   }
 
   logout() {
