@@ -8,13 +8,14 @@
       <div class="list-group list-group-flush">
         <a [routerLink]="['/home']" class="list-group-item list-group-item-action bg-light">home</a>
         
+        <button (click)="logout()" class="list-group-item list-group-item-action bg-light">logout</button>
         
         <ng-template [ngIf]="session" [ngIfElse]="logoutsession">
-          <a [routerLink]="['/login']" class="list-group-item list-group-item-action bg-light">login</a>
+          <button (click)="logout()" class="list-group-item list-group-item-action bg-light">logout</button>
         </ng-template>
 
         <ng-template #logoutsession>
-          <button (click)="logout()" class="list-group-item list-group-item-action bg-light">logout</button>>
+          <a [routerLink]="['/login']" class="list-group-item list-group-item-action bg-light">login</a>
         </ng-template>
         
         
