@@ -9,14 +9,14 @@
         <a [routerLink]="['/home']" class="list-group-item list-group-item-action bg-light">home</a>
         <ng-template [ngIf]="session" [ngIfElse]="logoutsession">
           <button (click)="logout()" class="list-group-item list-group-item-action bg-light">logout</button>
+          <a [routerLink]="['/favoritos']" class="list-group-item list-group-item-action bg-light">favoritos</a>
         </ng-template>
         <ng-template #logoutsession>
           <a [routerLink]="['/login']" class="list-group-item list-group-item-action bg-light">login</a>
+          <a [routerLink]="['/register']" class="list-group-item list-group-item-action bg-light">register</a>
         </ng-template>
-        <a *ngIf="session" [routerLink]="['/register']" class="list-group-item list-group-item-action bg-light">register</a>
         <a [routerLink]="['/contato']" class="list-group-item list-group-item-action bg-light">contato</a>
         <a [routerLink]="['/about']" class="list-group-item list-group-item-action bg-light">about</a>
-        <a [routerLink]="['/favoritos']" class="list-group-item list-group-item-action bg-light">favoritos</a>
       </div>
     </div>
     <!-- /#sidebar-wrapper -->
